@@ -54,11 +54,13 @@ public class Main {
       print("\nImports: (%d)", imports.size());
       for (Element link : imports) {
           print(" * %s <%s> (%s)", link.tagName(),link.attr("abs:href"), link.attr("rel"));
+          saveFile(link.attr("abs:src"), extractFileName(link.attr("abs:src")));
       }
 
       print("\nLinks: (%d)", links.size());
       for (Element link : links) {
           print(" * a: <%s>  (%s)", link.attr("abs:href"), trim(link.text(), 35));
+          saveFile(link.attr("abs:src"), extractFileName(link.attr("abs:src")));
       }
       
       
