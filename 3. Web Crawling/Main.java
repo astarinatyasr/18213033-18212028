@@ -18,22 +18,7 @@ public class Main {
 	  //DOWNLOADING
 	  String URLsource = "http://www.itb.ac.id/";
 	  saveFile(URLsource, "source.html");
-	  /*String urlString = "http://www.itb.ac.id/";
-      URL url = new URL(urlString);
-      BufferedReader reader = new BufferedReader
-      (new InputStreamReader(url.openStream()));
-      BufferedWriter writer = new BufferedWriter
-      (new FileWriter("source.html"));
-      String line;
-      while ((line = reader.readLine()) != null) {
-         System.out.println(line);
-         writer.write(line);
-         writer.newLine();
-      }
-      reader.close();
-      writer.close();
-      */
-      
+	 
       //PARSING HYPERLINK WHILE DOWNLOADING
       Document doc = Jsoup.connect(URLsource).get();
       Elements links = doc.select("a[href]");
