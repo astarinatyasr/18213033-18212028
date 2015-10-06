@@ -2,7 +2,7 @@ import socket
 import sys
 from thread import *
 
-HOST = '100.100.101.88'	# Symbolic name meaning all available interfaces
+HOST = '100.100.101.88'	# Insert your host name
 PORT = 8888	# Arbitrary non-privileged port
 add = None
 
