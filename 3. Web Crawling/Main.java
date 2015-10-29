@@ -18,7 +18,11 @@ public class Main {
 	  //DOWNLOADING
 	  String URLsource = "http://www.itb.ac.id/";
 	  saveFile(URLsource, "source.html");
+<<<<<<< HEAD
 	 
+=======
+      
+>>>>>>> origin/master
       //PARSING HYPERLINK WHILE DOWNLOADING
       Document doc = Jsoup.connect(URLsource).get();
       Elements links = doc.select("a[href]");
